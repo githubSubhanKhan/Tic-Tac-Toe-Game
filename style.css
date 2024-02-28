@@ -1,81 +1,202 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 #title {
-    color: white;
-    text-align: center;
-    margin-top: 10px;
-    font-family: 'Luckiest Guy', cursive;
-    cursor: pointer;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Luckiest Guy", cursive;
+  cursor: pointer;
 }
 #titlebar {
-    height: 50px;
+  height: 50px;
+}
+
+#titlebar a {
+  text-decoration: none;
 }
 body {
-    background-color: black;
+  background-color: black;
 }
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
 }
 .maingame {
-    height: 66vmin;
-    width: 66vmin;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
+  height: 66vmin;
+  width: 66vmin;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
 }
 .box {
-    width: 18vmin;
-    background-color: black;
-    border: none;
-    font-size: 14vmin;
-    color: white;
-    line-height: 0;
-    cursor: pointer;
-    text-align: center;
+  width: 18vmin;
+  background-color: black;
+  border: none;
+  font-size: 14vmin;
+  color: white;
+  line-height: 0;
+  cursor: pointer;
+  text-align: center;
 }
-#box1 , #box2 , #box4 , #box5 {
-    border-right: 5px solid white;
-    border-bottom: 5px solid white;
+#box1,
+#box2,
+#box4,
+#box5 {
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
 }
-#box3 , #box6 {
-    border-bottom: 5px solid white;
+#box3,
+#box6 {
+  border-bottom: 5px solid white;
 }
-#box7 , #box8 {
-    border-right: 5px solid white;
+#box7,
+#box8 {
+  border-right: 5px solid white;
 }
 #newBtn {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    margin: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
 }
 .newBtn {
-    border: 2px solid white;
-    background-color: black;
-    color: white;
-    height: 40px;
-    width: 150px;
-    border-radius: 5px;
-    font-size: 20px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    font-family: 'Luckiest Guy', cursive;
-    text-align: center;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: "Luckiest Guy", cursive;
+  text-align: center;
 }
 .newBtn:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 .msg {
-    color: white;
-    text-align: center;
-    margin: 15px;
-    font-family: 'Luckiest Guy', cursive;
+  color: white;
+  text-align: center;
+  margin: 15px;
+  font-family: "Luckiest Guy", cursive;
 }
+
+/* Feature 1 */
+
 .hide {
-    display: none;
+  display: none;
+}
+
+#newBtn.hide {
+  display: none;
+}
+
+.userInfoContainer {
+  margin: 150px 50px 0 0;
+}
+
+.user1Div,
+.user2Div,
+.continueBtnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user1Div p,
+.user2Div p {
+  color: white;
+  font-size: 30px;
+  cursor: default;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.user1Div input,
+.user2Div input {
+  background-color: black;
+  border: 2px solid white;
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  margin-left: 5px;
+}
+
+.user1Div input::placeholder,
+.user2Div input::placeholder {
+  text-align: center;
+}
+
+.user2Div {
+  margin-top: 50px;
+}
+
+.continueBtnDiv {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.continueBtnDiv button {
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  cursor: pointer;
+  font-family: "Luckiest Guy", cursive;
+  align-items: center;
+  justify-content: center;
+}
+
+.continueBtnDiv button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.leftArea,
+.rightArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.leftArea p,
+.rightArea p {
+  color: white;
+  font-size: 30px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.leftArea h6,
+.rightArea h6 {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.leftArea i,
+.rightArea i {
+  color: white;
+  font-size: 30px;
+  margin: 0;
+}
+
+.player1Score,
+.player2Score {
+  margin-bottom: 10px;
 }

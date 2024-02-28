@@ -1,42 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe Game</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/05e43308be.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <audio id="clickAudio" src="Audios\mixkit-negative-tone-interface-tap-2569-[AudioTrimmer.com].wav"></audio>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/05e43308be.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <audio
+      id="clickAudio"
+      src="Audios\mixkit-negative-tone-interface-tap-2569-[AudioTrimmer.com].wav"
+    ></audio>
     <audio id="winnerAudio" src="Audios\mixkit-instant-win-2021.wav"></audio>
-    <audio id="gameOveraudio" src="Audios\mixkit-wrong-answer-fail-notification-946.wav"></audio>
+    <audio
+      id="gameOveraudio"
+      src="Audios\mixkit-wrong-answer-fail-notification-946.wav"
+    ></audio>
     <div id="titlebar">
+      <a href="index.html">
         <h1 id="title">Tic Tac Toe</h1>
+      </a>
     </div>
     <main>
-        <div class="container">
-            <div class="maingame">
-                <button id="box1" class="box"></button>
-                <button id="box2" class="box"></button>
-                <button id="box3" class="box"></button>
-                <button id="box4" class="box"></button>
-                <button id="box5" class="box"></button>
-                <button id="box6" class="box"></button>
-                <button id="box7" class="box"></button>
-                <button id="box8" class="box"></button>
-                <button id="box9" class="box"></button>
-            </div>
+      <div class="container">
+        <div class="leftArea">
+          <p class="player1Score">0</p>
+          <i class="fa-solid fa-user"></i>
+          <h6 class="player1Name">Subhan</h6>
         </div>
-        <div class="msgContainer hide">
-            <h1 class="msg">Winner Message</h1>
+        <div class="maingame">
+          <button id="box1" class="box"></button>
+          <button id="box2" class="box"></button>
+          <button id="box3" class="box"></button>
+          <button id="box4" class="box"></button>
+          <button id="box5" class="box"></button>
+          <button id="box6" class="box"></button>
+          <button id="box7" class="box"></button>
+          <button id="box8" class="box"></button>
+          <button id="box9" class="box"></button>
         </div>
-        <div  id="newBtn">
-            <button class="newBtn">New Game</button>
+        <div class="rightArea">
+          <p class="player2Score">0</p>
+          <i class="fa-solid fa-user"></i>
+          <h6 class="player2Name">Subhan</h6>
         </div>
+      </div>
+      <div class="msgContainer hide">
+        <h1 class="msg">Winner Message</h1>
+      </div>
+      <div id="newBtn">
+        <button class="newBtn">New Game</button>
+      </div>
+      <div class="userInfoContainer">
+        <div class="user1Div">
+          <p>Player 01:</p>
+          <input type="text" placeholder="Enter Player Name" id="userName1" />
+        </div>
+        <div class="user2Div">
+          <p>Player 02:</p>
+          <input type="text" placeholder="Enter Player Name" id="userName2" />
+        </div>
+        <div class="continueBtnDiv">
+          <button id="continueBtn" onclick="saveUserInfo()">Start Game</button>
+        </div>
+      </div>
     </main>
-    
-</body>
-<script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </html>
